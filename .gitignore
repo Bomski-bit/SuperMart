@@ -1,6 +1,8 @@
 # Compiler files
 cache/
 out/
+broadcast/
+bytecode-coverage/
 
 # Ignores development broadcast logs
 !/broadcast

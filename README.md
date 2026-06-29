@@ -189,5 +189,5 @@ Contributions, issues, and feature requests are welcome!
 
 ## 👤 Author
 
-Boma Ogolo
+Boma Ogolo (@Bomski-bit)
 Smart Contract Developer | Solidity | Foundry
