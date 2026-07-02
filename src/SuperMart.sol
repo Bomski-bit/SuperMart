@@ -13,16 +13,6 @@ pragma solidity ^0.8.20;
 // Modifiers
 // Functions
 
-// Layout of Functions:
-// constructor
-// receive function (if exists)
-// fallback function (if exists)
-// external
-// public
-// internal
-// private
-// view & pure functions
-
 import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {SafeERC20} from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 import {IERC721} from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
@@ -33,29 +23,9 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {Pausable} from "@openzeppelin/contracts/utils/Pausable.sol";
 
 /**
- * @title SuperMart NFT Marketplace
- * @notice A decentralized NFT marketplace that supports both fixed-price listings and time-based auctions.
- * @dev
- * - Accepts ETH and any ERC-20 token as payment.
- * - Integrates EIP-2981 royalties for automated creator payouts.
- * - Includes configurable platform fees and secure admin controls.
- * - Implements pausing, safe withdrawals, and protection against reentrancy.
- *
- * Key Features:
- * - Fixed-price sales using ETH or ERC-20 tokens.
- * - Auctions with minimum bid and duration.
- * - EIP-2981 royalty detection and payment.
- * - Platform fee configurable by owner (capped at 20%).
- * - Pausable contract with onlyOwner administrative functions.
- * - Secure refund pattern for outbid bidders and failed transfers.
- *
- * Security:
- * - Uses ReentrancyGuard for critical functions.
- * - Follows Checks-Effects-Interactions pattern.
- * - SafeERC20 for token transfers.
- * - Supports fallback and receive for ETH deposits.
- *
- * @author Boma Ogolo
+ * @title SuperMart
+ * @author Ogolo Boma
+ * @dev A decentralized marketplace for NFTs supporting direct sales and auctions, with royalty and platform fee handling.
  */
 contract SuperMart is ReentrancyGuard, Ownable, Pausable {
     using SafeERC20 for IERC20;
